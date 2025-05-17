@@ -14,7 +14,7 @@ You can disable all the features by unchecking "Enable skipping"
 **Working features**
 - autoskip ads
 - autoskip tiktoks based on tags
-- autoskip tiktoks based on video lenght
+- autoskip tiktoks based on video length
 
 **Currently working on**
 - autoskip livestreams
