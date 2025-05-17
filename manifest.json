@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "TikTok Feed Filter",
+    "version": "1.0",
+    "description": "Reads description, tags, title, and checks if TikTok is an ad.",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "host_permissions": ["*://www.tiktok.com/*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.tiktok.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
