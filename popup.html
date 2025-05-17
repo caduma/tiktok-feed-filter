@@ -2,17 +2,59 @@
 <html>
   <head>
     <title>Extension Settings</title>
+    <style>
+      label { display: block; margin-top: 10px; }
+      .slider-label {
+        margin-top: 5px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
+    <label>
+      <input type="checkbox" id="enableSkipping" />
+      Enable skipping
+    </label>
+
+    <hr>
+
+    <label>
+      <input type="checkbox" id="skipLive" />
+      Skip livestreams
+    </label>
+
+    <hr>
+
     <label>
       <input type="checkbox" id="skipAds" />
       Skip ads
     </label>
-    <br />
+
+    <hr>
+
+    <label>
+      <input type="checkbox" id="skipTags" />
+      Skip based on tags
+    </label>
+
     <label>
       Skip tags (comma separated):<br />
-      <input type="text" id="skipTags" placeholder="#ad,#sponsored" />
+      <input type="text" id="tagsToSkip" placeholder="#ad,#sponsored" />
     </label>
+
+    <hr>
+
+    <label>
+      <input type="checkbox" id="skipDuration" />
+      Skip based on duration
+    </label>
+
+    <label class="slider-label" for="minSeconds">Minimum seconds: <span id="minSecondsValue">0</span></label>
+    <input type="range" id="minSeconds" min="0" max="600" value="0" />
+
+    <label class="slider-label" for="maxSeconds">Maximum seconds: <span id="maxSecondsValue">600</span></label>
+    <input type="range" id="maxSeconds" min="0" max="600" value="600" />
+
     <br />
     <button id="saveBtn">Save Settings</button>
 
